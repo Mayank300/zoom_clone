@@ -8,7 +8,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
   path: '/peerjs',
   host: '/',
-  port: 3030, 
+  port: '443', 
 }); 
 
 let myVideoStream;
@@ -26,7 +26,7 @@ navigator.mediaDevices.getUserMedia({
       call.on('stream', userVideoStream => {
         addVideoStream(video, userVideoStream)
       });
-    });
+    });``
 
     socket.on('user-connected', userId => {
       connectToNewUser(userId, stream)
